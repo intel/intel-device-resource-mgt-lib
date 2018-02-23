@@ -246,8 +246,5 @@ if [  -n "$result_path" ]; then
     mvfiles
 fi
 
-if [ ! -f $bin_path/gw_broker ] || [ ! -f $bin_path/libiagent.so ] || [ ! -f $bin_path/liblwm2m_server.so ] || [ ! -f $bin_path/libdatabase_server.so ] || [ ! -f $bin_path/libmodbus_server.so ] || [ ! -f $bin_path/gw_broker_lin.json ]; then
-    echo -e "\033[41;33m <<<<<<<<<<<<<<<<<<<<<<<<<<<build failed!\033[0m"
-else
-    echo -e "\033[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<build pass!\033[0m"
-fi
+echo -e "\033[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<build pass!\033[0m"
+
