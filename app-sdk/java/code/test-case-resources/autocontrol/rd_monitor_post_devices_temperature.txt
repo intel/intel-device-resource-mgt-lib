@@ -1,0 +1,44 @@
+[
+    {
+        "di": "test_device_id_9", 
+        "s": "on", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "mush", 
+            "bild2", 
+            "floor1"
+        ], 
+        "attrs": {"t":"t1","n":"n1"}, 
+        "dt": "temperature", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ]
+            },
+            {
+                "href": "/6000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.5000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    }
+]

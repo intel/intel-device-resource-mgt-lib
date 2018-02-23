@@ -1,0 +1,5 @@
+{
+    "target_type": "device", 
+    "target_id": "test_device_1", 
+    "config_path": "autocontrol/device/hh"
+}

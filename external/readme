@@ -1,0 +1,13 @@
+Please run the download.sh to get the dependent external open soruce projects.
+
+1. iot-edge
+=============
+if you put the iot-edge.tar.gz file under the external folder,
+the build script will automatically extract if the iot-edge folder
+doesn't exit.
+
+otherwise the script will clone the iot-edge from the github.
+
+2. the folder "modified_opensource"
+=====================================
+It contains some changes to the open sources.

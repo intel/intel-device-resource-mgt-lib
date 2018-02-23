@@ -1,0 +1,49 @@
+{
+  "modules": [
+    {
+      "name": "iagent",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "../../debug/iagent/product/libiagent.so"
+        }
+      },
+      "args": null
+    },
+    {
+      "name": "modbus",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "../../debug/iagent/product/libmodbus_server.so"
+        }
+      },
+      "args": null
+    }, 
+    {
+      "name": "lwm2m",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "../../debug/iagent/product/liblwm2m_server.so"
+        }
+      },
+      "args": null
+    }
+  ],
+  "links": [
+    {
+      "source": "*",
+      "sink": "iagent"
+    },
+    {
+      "source": "*",
+      "sink": "modbus"
+    },
+    {
+      "source": "*",
+      "sink": "lwm2m"
+    }
+
+  ]
+}

@@ -1,0 +1,9 @@
+{
+"app_uuid": "7E7DDB47-FDC7-4AD5-A7F6-6D89E97F58C5",
+"app_name": "AppMonitorDeviceAndResource",
+"heap_size": 10000,
+"stack_size": 10000,
+"profile": "edge",
+"app_type": "main",
+"version": "0.1"
+}

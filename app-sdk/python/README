@@ -1,0 +1,21 @@
+
+Test from development machine
+=======================================
+
+cd ${repo-root}/value-add/project/python-libs
+./setup_libs.sh
+
+export the PYTHONPATH according to the message.
+
+
+
+Python libraries on target machine
+===========================================
+
+The PYTHONPATH will be set automatically for packages:
+  ams:        /ams/ams_client/product/python_lib
+  ams_utils:  /ams/ams_client/product/python/python_lib
+  coapthon:   /ams/ams_client/product/python/python_lib
+  iagent:     /ams/iagent/product/iagent_sdk
+  
+  

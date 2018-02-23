@@ -1,0 +1,9 @@
+{
+"app_uuid": "4904F074-D169-42E3-8CB9-F7DBCA85FC2F",
+"app_name": "AppMonitorResourceDataForTemperature",
+"heap_size": 10000,
+"stack_size": 10000,
+"profile": "edge",
+"app_type": "main",
+"version": "0.1"
+}

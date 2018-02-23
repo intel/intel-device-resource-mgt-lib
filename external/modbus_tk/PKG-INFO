@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: modbus_tk
+Version: 0.5.4
+Summary: Implementation of modbus protocol in python
+Home-page: https://github.com/ljean/modbus-tk/
+Author: Luc Jean
+Author-email: luc.jean@gmail.com
+License: LGPL
+Description: 
+            Modbus Test Kit provides implementation of slave and master for Modbus TCP and RTU 
+            The main goal is to be used as testing tools.
+            
+Keywords: modbus,serial,tcp
+Platform: Linux
+Platform: Mac OS X
+Platform: Win
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Communications
+Classifier: Topic :: Software Development

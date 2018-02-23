@@ -1,0 +1,25 @@
+{
+  "app_uuid": "ce9c1124-bab8-4a52-bbe2-31ffa69a5167",
+  "app_name": "PLC_Light_Demo",
+  "heap_size": 10000,
+  "stack_size": 10000,
+  "profile": "edge",
+  "app_type": "main",
+  "version": "1.4",
+  "api_level": 
+  {
+    "tested": ["1.0"],
+    "max": "1.0",
+    "min": "1.0"
+  },
+  "event": 
+  {
+    "register": [0, 1, 2, 3, 4],
+    "post": [0, 1]
+  },
+  "product_dependency": 
+  [
+    {"product_name": "iMRT", "min_version": "1.0"},
+    {"product_name": "iAgent"}
+  ]
+}

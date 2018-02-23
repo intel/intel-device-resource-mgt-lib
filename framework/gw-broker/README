@@ -1,0 +1,25 @@
+Build iAgent modules
+====================
+
+1. ensure the envionment is setup
+   
+2. start build
+   ./iagent_build.sh
+   
+   use -h to see the usages
+   
+
+   
+Build seimens S7 PLC plugin
+===========================
+The S7 PLC plugin is deveoped on plugin SDK and still under development.
+
+1. goto to the folder "modules/siemens-s7"
+
+2. run: 
+   mkdir build
+   cd build
+   cmake ..
+   make
+   
+   

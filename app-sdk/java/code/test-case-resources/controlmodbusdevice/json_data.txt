@@ -1,0 +1,10 @@
+[
+    {
+        "type": "RD_MONITOR", 
+        "filename": "rd_monitor_post_devices.txt"
+    }, 
+    {
+        "type": "DATA_MONITOR", 
+        "filename": "data_monitor_post_lwm2m.txt"
+    }
+]

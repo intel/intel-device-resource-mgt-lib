@@ -1,0 +1,9 @@
+{
+"app_uuid": "BCB9B392-60BF-4AC8-8896-701293F9435C",
+"app_name": "AppControlAlgorithmForMushroom",
+"heap_size": 10000,
+"stack_size": 10000,
+"profile": "edge",
+"app_type": "main",
+"version": "0.1"
+}

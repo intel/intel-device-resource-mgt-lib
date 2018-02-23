@@ -1,0 +1,9 @@
+{
+"app_uuid": "626D7FEF-62CD-49CD-9DA5-0B46DEF671F4",
+"app_name": "AppMonitorConfigureFile",
+"heap_size": 10000,
+"stack_size": 10000,
+"profile": "edge",
+"app_type": "main",
+"version": "0.1"
+}

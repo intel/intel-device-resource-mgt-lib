@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.intel.openiot</groupId>
+	<artifactId>lwm2m-client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>This is the simulators of lwm2m devices</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.github.leshan</groupId>
+			<artifactId>leshan-client</artifactId>
+			<version>0.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.github.leshan</groupId>
+			<artifactId>leshan-core</artifactId>
+			<version>0.1.8</version>
+		</dependency>
+		<dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+	<!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
+	<dependency>
+		<groupId>jfree</groupId>
+		<artifactId>jfreechart</artifactId>
+		<version>1.0.13</version>
+	</dependency>
+        
+	</dependencies>
+</project>

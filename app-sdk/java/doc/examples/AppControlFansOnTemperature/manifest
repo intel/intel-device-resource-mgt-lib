@@ -1,0 +1,9 @@
+{
+"app_uuid": "70A51AC4-4E80-42D9-8B1A-35209A736B75",
+"app_name": "AppControlFansOnTemperature",
+"heap_size": 10000,
+"stack_size": 10000,
+"profile": "edge",
+"app_type": "main",
+"version": "0.1"
+}

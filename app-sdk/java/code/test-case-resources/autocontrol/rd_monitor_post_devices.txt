@@ -1,0 +1,53 @@
+[
+    {
+        "di": "test_device_id_1", 
+        "s": "off", 
+        "st": "iagent", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "roomID1", 
+            "roomID2", 
+            "floor1"
+        ], 
+        "attrs": {"room1":"roomID1","room2":"roomID2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "temperature", 
+                "rt": 
+                    ["oic.r.temperature", "oic.r.switch.value"]
+                , 
+                "groups": [
+                      "roomID1", 
+                     "roomID2", 
+                ], 
+                "attrs": {"cooler":"cooler1","fans":"fans1","sensor":"sensor1"}
+            }, 
+            {
+                "href": "humidity", 
+                "rt": 
+                    ["oic.r.humidity"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "roomID1", 
+                    "roomID2", 
+                ],
+                "attrs":{"heater":"heater1","sensor":"sensor2"}
+            }, 
+            {
+                "href": "lightness", 
+                "rt": 
+                     ["oic.r.lightness"]
+                , 
+                "groups": [
+                    "roomID1", 
+                    "roomID2", 
+                    ""
+                ],
+                "attrs":{"lighter":"lighter1","sensor":"sensor3"}
+            }
+        ]
+    }
+]

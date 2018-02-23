@@ -1,0 +1,6 @@
+[
+    {
+        "type": "APPCONFIG", 
+        "filename": "appconfig_post_notify.txt"
+    }
+]

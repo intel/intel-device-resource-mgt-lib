@@ -1,0 +1,2571 @@
+[
+    {
+        "di": "test_device_id_1", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_2", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_3", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_4", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_5", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_6", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_7", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_8", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_9", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_10", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_11", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_12", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_13", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_14", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_15", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_16", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_17", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_18", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_19", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_20", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_21", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_22", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_23", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_24", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_25", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_26", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_27", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_28", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_29", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_30", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_31", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_32", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_33", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_34", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_35", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_36", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_37", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_38", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_39", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_40", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_41", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_42", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_43", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },
+     {
+        "di": "test_device_id_44", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_45", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    }
+    ,{
+        "di": "test_device_id_46", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    }
+    ,{
+        "di": "test_device_id_47", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    },{
+        "di": "test_device_id_48", 
+        "s": "off", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "build1", 
+            "bild2", 
+            "floor1"
+        ], 
+       "attrs": {"key1":"value1","key2":"value2"}, 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary", "oic.r.switch.value"]
+                , 
+                "groups": [
+                    "room1", 
+                    "room2"
+                ], 
+                "attrs": ""
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "ghf", 
+                    "3", 
+                    "jh"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "", 
+                    "", 
+                    ""
+                ]
+            }
+        ]
+    }
+    ]

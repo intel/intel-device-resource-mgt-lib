@@ -1,0 +1,55 @@
+[
+    {
+        "di": "test_device_id_1", 
+        "s": "on", 
+        "st": "lwm2m", 
+        "addr": "coap://127.0.0.1:5683", 
+        "groups": [
+            "01", 
+            "02", 
+            "03"
+        ], 
+        "dt": "light", 
+        "set": "u", 
+        "links": [
+            {
+                "href": "test_resource/1", 
+                "rt": 
+                    ["oic.r.switch.binary"]
+                , 
+                "groups": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ]
+            }, 
+            {
+                "href": "test_resource/2", 
+                "rt": 
+                    ["oic.r.light.brightness"]
+                , 
+                "groups": [
+                    "1001b", 
+                    "1002b", 
+                    "1003b"
+                ]
+            }, 
+            {
+                "href": "/3000", 
+                "inst": [
+                    "10", 
+                    "11", 
+                    "12"
+                ], 
+                "rt": 
+                    ["oma.lwm2m.3000"]
+                , 
+                "groups": [
+                    "1001c", 
+                    "1002c", 
+                    "1003c"
+                ]
+            }
+        ]
+    }
+]

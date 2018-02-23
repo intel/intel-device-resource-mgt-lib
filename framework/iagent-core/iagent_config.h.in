@@ -1,0 +1,8 @@
+#define IAGENT_VERSION @IAGENT_VERSION@
+
+#cmakedefine RUN_ON_LINUX
+#cmakedefine RUN_ON_VXWORKS
+#cmakedefine RUN_ON_ZEPHRY
+#cmakedefine RUN_ON_STM32
+#cmakedefine RUN_AS_BROKER_MODULE
+#cmakedefine OPTION_DEBUG

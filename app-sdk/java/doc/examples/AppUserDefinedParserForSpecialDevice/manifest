@@ -1,0 +1,9 @@
+{
+"app_uuid": "48BDA48B-113F-4E02-B3C8-89222873259B",
+"app_name": "AppUserDefinedParserForSpecialDevice",
+"heap_size": 10000,
+"stack_size": 10000,
+"profile": "edge",
+"app_type": "main",
+"version": "0.1"
+}
