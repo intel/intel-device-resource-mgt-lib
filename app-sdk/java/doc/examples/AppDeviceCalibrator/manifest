@@ -1,9 +1,0 @@
-{
-"app_uuid": "EB14C9CE-AC66-4D49-A5CA-D3EA4C29B9E4",
-"app_name": "AppDeviceCalibrator",
-"heap_size": 10000,
-"stack_size": 10000,
-"profile": "edge",
-"app_type": "main",
-"version": "0.1"
-}

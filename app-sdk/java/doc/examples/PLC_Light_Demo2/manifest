@@ -1,9 +1,0 @@
-{
-"app_uuid": "E3AE32D4-509F-479D-8551-7DBD5A4BBC18",
-"app_name": "PLC_Light_Demo2",
-"heap_size": 10000,
-"stack_size": 10000,
-"profile": "edge",
-"app_type": "main",
-"version": "0.1"
-}

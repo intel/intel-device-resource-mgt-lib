@@ -1,1 +1,0 @@
-{"method":"put","uri":"test_device_id_1/test_resource/2"}

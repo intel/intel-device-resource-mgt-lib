@@ -1,9 +1,0 @@
-{
-"app_uuid": "07EC7B06-AA6C-4AAA-B21D-96228ED9C41A",
-"app_name": "AppUnitTestServer",
-"heap_size": 10000,
-"stack_size": 10000,
-"profile": "edge",
-"app_type": "main",
-"version": "0.1"
-}
