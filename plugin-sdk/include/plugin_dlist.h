@@ -30,6 +30,7 @@
 #include "azure_c_shared_utility/doublylinkedlist.h"
 #include "azure_c_shared_utility/threadapi.h"
 #include "azure_c_shared_utility/lock.h"
+#include "azure_c_shared_utility/condition.h"
 
 
 #ifdef __cplusplus
@@ -41,7 +42,7 @@ typedef struct dlist_entry_ctx
 {
 	DLIST_ENTRY list_queue;
 	LOCK_HANDLE thread_mutex;
-
+	COND_HANDLE thread_cond;
 } dlist_entry_ctx_t;
 
 typedef enum
@@ -65,6 +66,9 @@ typedef struct
 
 void dlist_post(dlist_entry_ctx_t *,E_Msg_Type,  void * messageHandle, void * handler);
 dlist_node_t * dlist_get(dlist_entry_ctx_t * link);
+dlist_entry_ctx_t * create_dlist();
+void free_dlist(dlist_entry_ctx_t * dlist);
+
 
 #ifdef __cplusplus
 }

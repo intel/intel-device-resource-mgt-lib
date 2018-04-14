@@ -280,3 +280,110 @@ end:
 
 	return messageHandle;
 }
+
+
+
+MESSAGE_HANDLE encode_event(bus_event_t * request)
+{
+    MESSAGE_HANDLE messageHandle = NULL;
+    int len;
+    char buffer[100];
+    MESSAGE_CONFIG msgConfig[1];
+
+    MAP_HANDLE propertiesMap = Map_Create(NULL);
+    if(propertiesMap == NULL)
+    {
+        ERROR("unable to create a Map");
+        goto end;
+    }
+
+    // set message tag
+    if (Map_AddOrUpdate(propertiesMap, XK_TAG, TAG_EVENT) != MAP_OK)
+    {
+        ERROR("unable to set TAG_REST_RESP");
+        goto end;
+    }
+
+
+    // set payload fmt
+    if (request->payload_fmt != -1 && Map_AddOrUpdate(propertiesMap, XK_FMT, rest_fmt_str(request->payload_fmt,buffer)) != MAP_OK)
+    {
+        ERROR("unable to set payload format\n");
+        goto end;
+    }
+
+    // set source module
+    if (request->src_module && Map_AddOrUpdate(propertiesMap, XK_SRC, request->src_module) != MAP_OK)
+    {
+        ERROR("unable to Map_AddOrUpdate");
+        goto end;
+    }
+
+
+    // set uri
+
+    if (request->url && Map_AddOrUpdate(propertiesMap, XK_URI, request->url) != MAP_OK)
+    {
+        ERROR("unable to Map_AddOrUpdate");
+        goto end;
+    }
+
+    // set qeury
+    if (request->query && Map_AddOrUpdate(propertiesMap, XK_QUERY, request->query) != MAP_OK)
+    {
+        ERROR("unable to Map_AddOrUpdate");
+        goto end;
+    }
+
+
+    // The message has only properties and no content.
+    msgConfig->size = request->payload_len;
+    msgConfig->source = request->payload;
+    msgConfig->sourceProperties = propertiesMap;
+
+    messageHandle = Message_Create((const MESSAGE_CONFIG *)msgConfig);
+    if (messageHandle == NULL)
+    {
+        ERROR("unable to create  message\n");
+        goto end;
+    }
+
+
+end:
+    if(propertiesMap) Map_Destroy(propertiesMap);
+
+    return messageHandle;
+}
+
+
+
+bool decode_event(MESSAGE_HANDLE messageHandle, bus_event_t * request)
+{
+    bool ret = true;
+    CONSTMAP_HANDLE properties = Message_GetProperties(messageHandle); /*by contract this is never NULL*/
+
+    request->url = (char*)ConstMap_GetValue(properties, XK_URI);
+    if(request->url == NULL) ret = false;
+
+    const CONSTBUFFER * content = Message_GetContent(messageHandle);
+    request->payload = (char*)content->buffer;
+    request->payload_len = content->size;
+
+    request->src_module = (char*)ConstMap_GetValue(properties, XK_SRC);
+
+    const char * fmt = ConstMap_GetValue(properties, XK_FMT);
+    if(fmt)
+        request->payload_fmt = atoi(fmt);
+    else
+    {
+        request->payload_fmt = -1;
+        ret = false;
+    }
+
+    request->query = (char*)ConstMap_GetValue(properties, XK_QUERY);
+
+    ConstMap_Destroy(properties);
+
+    return ret;
+}
+

@@ -18,20 +18,10 @@
 #include "plugin_sdk.h"
 #include "sdk_internals.h"
 
-void wakeup_working_thread(void * framework)
+void idrm_wakeup_working_thread(void * framework)
 {
-    framework_ctx_t * ctx = (framework_ctx_t*) framework;
-    if(ctx->working_thread_waker)
-    {
-        f_wakeup_working_thread waker_function = (f_wakeup_working_thread) ctx->working_thread_waker;
-        waker_function(framework);
-    }
+	framework_ctx_t *ctx = (framework_ctx_t*) framework;
+	Condition_Post(ctx->g_working_thread_cond);
 }
 
 
-void set_working_thread_waker(void * framework_ctx, f_wakeup_working_thread waker_function)
-{
-    framework_ctx_t * framework = (framework_ctx_t*) framework_ctx;
-
-    framework->working_thread_waker = waker_function;
-}

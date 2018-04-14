@@ -75,19 +75,19 @@ static int post_cb_working_thread(callback_t * cb)
 {
 	if(cb->format == T_Broker_Message_Handle)
 		cb->data = Message_Clone((MESSAGE_HANDLE)cb->data);
-	dlist_post(g_framework_ctx->internal_queue, T_Callback, cb, NULL);
-	wakeup_working_thread(g_framework_ctx);
+	dlist_post(get_framework_ctx()->internal_queue, T_Callback, cb, NULL);
+	idrm_wakeup_working_thread(get_framework_ctx());
 	return 0;
 }
 
 
 
-int request_bus_service(restful_request_t * request, Service_Result_Handler response_handler, void * user_data, int timeout)
+int idrm_request_bus_service(restful_request_t * request, Service_Result_Handler response_handler, void * user_data, int timeout)
 {
 	MESSAGE_CONFIG msgConfig;
 
-	request->mid = bh_gen_id(g_framework_ctx->transactions_ctx);
-	request->src_module = g_framework_ctx->module_name;
+	request->mid = bh_gen_id(get_framework_ctx()->transactions_ctx);
+	request->src_module = get_framework_ctx()->module_name;
 	MESSAGE_HANDLE message = encode_request(request);
 	if(message == NULL) return -1;
 
@@ -98,18 +98,34 @@ int request_bus_service(restful_request_t * request, Service_Result_Handler resp
 	ctx->user_data = user_data;
 
 	void * thread_handler = NULL;
-	if(g_framework_ctx->internal_queue)
+	if(get_framework_ctx()->internal_queue)
 		thread_handler = post_cb_working_thread;
 
-	bh_wait_response_async(g_framework_ctx->transactions_ctx,
+	bh_wait_response_async(get_framework_ctx()->transactions_ctx,
 			request->mid ,
 			cb_request,
 			ctx,
 			timeout,
 			(void *)thread_handler);
 
-	(void)Broker_Publish(g_framework_ctx->broker_handle, (MODULE_HANDLE)g_framework_ctx->module_handle, message);
+	(void)Broker_Publish(get_framework_ctx()->broker_handle, (MODULE_HANDLE)get_framework_ctx()->module_handle, message);
 	Message_Destroy(message);
 
 	return 0;
+}
+
+
+
+int idrm_post_bus_event(bus_event_t * request)
+{
+    MESSAGE_CONFIG msgConfig;
+
+    request->src_module = get_framework_ctx()->module_name;
+    MESSAGE_HANDLE message = encode_event(request);
+    if(message == NULL) return -1;
+
+    (void)Broker_Publish(get_framework_ctx()->broker_handle, (MODULE_HANDLE)get_framework_ctx()->module_handle, message);
+    Message_Destroy(message);
+
+    return 0;
 }

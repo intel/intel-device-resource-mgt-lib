@@ -11,9 +11,10 @@ set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 if(NOT DEFINED NO_CHECK_UNDEFINE_SHLIB)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,--no-allow-shlib-undefined,--add-needed")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,--no-undefined -Wl,--no-allow-shlib-undefined,--add-needed")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,--no-allow-shlib-undefined,--copy-dt-needed-entries")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,--no-undefined -Wl,--no-allow-shlib-undefined,--copy-dt-needed-entries")
 endif()
+#--add-needed
 
 SET(PLUGIN_SDK_DIR ${CMAKE_CURRENT_LIST_DIR})
 SET(SHARED_LIBS_DIR ${CMAKE_CURRENT_LIST_DIR}/../idr-mgt-shared-libs)
@@ -25,7 +26,9 @@ endif (NOT CMAKE_BUILD_TYPE)
 
 if(NOT DEFINED platform)
   set(platform "host")
-  message(STATUS "platform  not defined. set it to: \"${platform}\"")
+  message(STATUS "common.cmake: platform  not defined. set it to: \"${platform}\"")
+else()
+  message(STATUS "common.cmake: platform is [${platform}]")
 endif()
 
 # Set the install prefix

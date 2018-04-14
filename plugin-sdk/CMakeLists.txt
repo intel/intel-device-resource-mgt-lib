@@ -22,7 +22,7 @@ endif (NOT CMAKE_BUILD_TYPE)
 # Set the install prefix
 if(NOT DEFINED platform)
   set(platform "host")
-  message(STATUS "platform  not defined. set it to: \"${platform}\"")
+  message(STATUS "Plugin lib: platform  not defined. set it to: \"${platform}\"")
 endif()
 
 set(AZURE_BASE ${PLUGIN_SDK_DIR}/azure_base/${platform})
@@ -30,7 +30,7 @@ set(AZURE_BASE ${PLUGIN_SDK_DIR}/azure_base/${platform})
 # Set the install prefix
 if(NOT DEFINED OUTPUT_PATH)
   set(OUTPUT_PATH ${AZURE_BASE})
-  message(STATUS "OUTPUT_PATH not defined. set it to: \"${OUTPUT_PATH}\"")
+  message(STATUS "Plugin lib: OUTPUT_PATH not defined. set it to: \"${OUTPUT_PATH}\"")
 endif()
 
 #set(EXECUTABLE_OUTPUT_PATH ${OUTPUT_PATH})
@@ -74,8 +74,7 @@ set(plugin_sdk_headers
 
 #this builds the hello_world dynamic library
 add_library(plugin_sdk MODULE ${plugin_sdk_sources} ${plugin_sdk_headers})
-target_link_libraries(plugin_sdk gateway)
-# aziotsharedutil  nanomsg ssl crypto dl pthread rt anl)
+target_link_libraries(plugin_sdk gateway aziotsharedutil  nanomsg ssl crypto dl pthread rt anl)
 
 #this builds the hello_world static library
 #add_library(plugin_sdk_static STATIC ${plugin_sdk_sources} ${plugin_sdk_headers})

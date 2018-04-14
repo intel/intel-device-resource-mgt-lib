@@ -25,12 +25,15 @@
 #include "plugin_dlist.h"
 
 
-framework_ctx_t * g_framework_ctx = NULL;
-void * init_restful_framework(char * module_name, MODULE_HANDLE module, BROKER_HANDLE broker, bool separate_thread)
-{
+static framework_ctx_t * g_framework_ctx = NULL;
 
-	if(g_framework_ctx)
-		return g_framework_ctx;
+framework_ctx_t * get_framework_ctx()
+{
+    return g_framework_ctx;
+}
+
+void * idrm_init_restful_framework(char * module_name, MODULE_HANDLE module, BROKER_HANDLE broker, bool separate_thread)
+{
 
 	framework_ctx_t * ctx = (framework_ctx_t*) malloc(sizeof (framework_ctx_t));
 	if(ctx == NULL)
@@ -48,24 +51,45 @@ void * init_restful_framework(char * module_name, MODULE_HANDLE module, BROKER_H
 
 	if(separate_thread)
 	{
-		ctx->internal_queue = (dlist_entry_ctx_t *) malloc(sizeof(dlist_entry_ctx_t));
-		memset(ctx->internal_queue, 0, sizeof(*ctx->internal_queue));
-	    DList_InitializeListHead(&(ctx->internal_queue->list_queue));
-	    ctx->internal_queue->thread_mutex = Lock_Init();
+		ctx->internal_queue = create_dlist();
 	}
+
+	ctx->g_working_thread_cond = Condition_Init();
+	ctx->g_working_thread_lock = Lock_Init();
+
 
 	g_framework_ctx = ctx;
 	return ctx;
 }
 
-bool register_resource_handler(const char * url, Plugin_Res_Handler handler, rest_action_t action)
+
+void idrm_cleanup_restful_framework(void * framework)
+{
+	framework_ctx_t * ctx = (framework_ctx_t *)framework;
+
+	if(ctx->g_working_thread_cond)
+		Condition_Deinit(ctx->g_working_thread_cond);
+
+	if(ctx->g_working_thread_lock)
+	    Lock_Deinit(ctx->g_working_thread_cond);
+
+	if(ctx->internal_queue)
+		free_dlist(ctx->internal_queue);
+
+	free(ctx->module_name);
+
+	free(ctx);
+}
+
+bool idrm_register_resource_handler(void *framework_ctx , const char * url, Plugin_Res_Handler handler, rest_action_t action)
 {
 
+    framework_ctx_t * framework = (framework_ctx_t*) framework_ctx;
 	if(action >= MAX_RESTFUL_ACTION) return false;
 
-	Lock(g_framework_ctx->resources_handlers_lock);
+	Lock(framework->resources_handlers_lock);
 
-	resource_handler_node_t * node = g_framework_ctx->resources_handlers;
+	resource_handler_node_t * node = framework->resources_handlers;
 	while(node)
 	{
 		if(strcmp(node->url, url) == 0)
@@ -86,12 +110,12 @@ bool register_resource_handler(const char * url, Plugin_Res_Handler handler, res
 		node->url = strdup(url);
 		node->res_handlers[action] = handler;
 
-		node->next = g_framework_ctx->resources_handlers;
-		g_framework_ctx->resources_handlers = node;
+		node->next = framework->resources_handlers;
+		framework->resources_handlers = node;
 	}
 
 
-	Unlock(g_framework_ctx->resources_handlers_lock);
+	Unlock(framework->resources_handlers_lock);
 
 	return true;
 }
@@ -103,8 +127,10 @@ enum
 	Tag_Evt
 };
 
-bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle)
+bool idrm_handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle)
 {
+	IDRM_MOD_HANDLE_DATA* handleData = moduleHandle;
+
 	bool ret = false;
 
 
@@ -139,8 +165,6 @@ bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle
     	goto end;
     }
 
-	const char* sfmt = ConstMap_GetValue(properties, XK_FMT);
-	if(sfmt == NULL) goto end;
 
     uint32_t id = 0;
     const char* mid = ConstMap_GetValue(properties, XK_MID);
@@ -170,28 +194,41 @@ bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle
     	const char* uri = ConstMap_GetValue(properties, XK_URI);
     	if (uri == NULL) goto end;
 
-    	Lock(g_framework_ctx->resources_handlers_lock);
+    	Lock(handleData->framework->resources_handlers_lock);
 
-    	resource_handler_node_t * node = g_framework_ctx->resources_handlers;
+    	resource_handler_node_t * node = handleData->framework->resources_handlers;
     	while(node)
     	{
-    		if(node->res_handlers[action] && match_url(node->url, (char*)uri) )
+    		if(match_url(node->url, (char*)uri) )
     		{
+    		    Plugin_Res_Handler handler = node->res_handlers[T_Default];
+    		    if(node->res_handlers[action])
+    		        handler = node->res_handlers[action];
+
+    		    if(handler == NULL)
+    		        continue;
+
     			// post it to working thread
     			if(g_framework_ctx->internal_queue)
     			{
-    				dlist_post(g_framework_ctx->internal_queue, T_MESSAGE_REQUEST, Message_Clone(messageHandle), node->res_handlers[action]);
-    				wakeup_working_thread(g_framework_ctx);
+    				dlist_post(handleData->framework->internal_queue,
+    				        tag == Tag_Evt?T_MESSAGE_EVENT:T_MESSAGE_REQUEST,
+    				        Message_Clone(messageHandle), handler);
+    				idrm_wakeup_working_thread(handleData->framework);
     			}
-
     			// handle the request here
+    			else if(tag == Tag_Evt)
+    			{
+    			    restful_request_t request = {0};
+    			    decode_request(messageHandle, &request);
+    			    handler(&request, NULL);
+    			}
     			else
     			{
     				restful_request_t request = {0};
     				restful_response_t response = {0};
     				decode_request(messageHandle, &request);
 
-    				Plugin_Res_Handler handler = (Plugin_Res_Handler)node->res_handlers[action];
     				if(handler(&request, &response))
     				{
     					response.mid = request.mid;
@@ -201,7 +238,7 @@ bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle
 						MESSAGE_HANDLE response_handle = encode_response(&response);
 						if(response_handle)
 						{
-							(void)Broker_Publish(g_framework_ctx->broker_handle, (MODULE_HANDLE)g_framework_ctx->module_handle, response_handle);
+							(void)Broker_Publish(handleData->framework->broker_handle, (MODULE_HANDLE)g_framework_ctx->module_handle, response_handle);
 							Message_Destroy(response_handle);
 						}
     				}
@@ -212,7 +249,7 @@ bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle
     		}
     		node = node->next;
     	}
-    	Unlock(g_framework_ctx->resources_handlers_lock);
+    	Unlock(handleData->framework->resources_handlers_lock);
 
         goto end;
     }
@@ -220,7 +257,7 @@ bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle
     {
 
        	// trigger the callback function cb_foward_response_to_client()
-		bh_feed_response(g_framework_ctx->transactions_ctx, id, messageHandle, 0, T_Broker_Message_Handle);
+		bh_feed_response(handleData->framework->transactions_ctx, id, messageHandle, 0, T_Broker_Message_Handle);
     }
 
 end:
@@ -229,7 +266,7 @@ end:
 
 
 
-uint32_t process_in_working_thread(void * ctx)
+uint32_t idrm_process_in_working_thread(void * ctx)
 {
 	framework_ctx_t * framework = (framework_ctx_t *) ctx;
 	while(framework->internal_queue)
@@ -238,18 +275,24 @@ uint32_t process_in_working_thread(void * ctx)
 		if(msg == NULL)
 			break;
 
-		if(msg->type == T_MESSAGE_REQUEST)
+		if(msg->type == T_MESSAGE_REQUEST || msg->type == T_MESSAGE_EVENT)
 		{
 			MESSAGE_HANDLE messageHandle = (MESSAGE_HANDLE) msg->message;
 
 			restful_request_t request = {0};
 			restful_response_t response = {0};
+
 			decode_request(messageHandle, &request);
 
 			Plugin_Res_Handler handler = (Plugin_Res_Handler) msg->message_handler;
-			if(handler(&request, &response))
-			{
 
+			// event don't need response
+			if(request.mid == -1 || msg->type == T_MESSAGE_EVENT)
+			{
+			    handler(&request, NULL);
+			}
+			else if(handler(&request, &response))
+			{
 				response.mid = request.mid;
 				response.dest_module = request.src_module;
 
@@ -262,11 +305,12 @@ uint32_t process_in_working_thread(void * ctx)
 					Message_Destroy(response_handle);
 				}
 
-				Message_Destroy(messageHandle);
+				if(response.payload) free(response.payload);
 			}
 
-			if(response.payload) free(response.payload);
+			Message_Destroy(messageHandle);
 		}
+
 
 		free(msg);
 	}

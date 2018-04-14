@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-
-#include "hello_world.h"
-
+#include <stdlib.h>
+#include "plugin_sdk.h"
 #include "er-coap-constants.h"
 
 bool res_hello_handler (restful_request_t *request, restful_response_t * response)
@@ -25,6 +24,8 @@ bool res_hello_handler (restful_request_t *request, restful_response_t * respons
 	response->payload_fmt = IA_TEXT_PLAIN;
 	response->payload = strdup("hello");
 	response->payload_len = strlen(response->payload) + 1;
+
+	printf("hello service: returned\n");
 
 	return true;
 }

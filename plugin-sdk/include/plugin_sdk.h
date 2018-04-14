@@ -37,6 +37,7 @@
 #include "azure_c_shared_utility/doublylinkedlist.h"
 #include "azure_c_shared_utility/threadapi.h"
 #include "azure_c_shared_utility/lock.h"
+#include "azure_c_shared_utility/condition.h"
 #include "azure_c_shared_utility/crt_abstractions.h"
 #include "message.h"
 #include "broker.h"
@@ -50,10 +51,12 @@ extern "C" {
 
 typedef enum
 {
+    T_Default = 0,
 	T_Get = 1,
 	T_Post,
 	T_Put,
-	T_Del
+	T_Del,
+	MAX_RESTFUL_ACTION
 } rest_action_t;
 
 
@@ -81,12 +84,26 @@ typedef struct _restful_response
 	char * dest_module;
 }restful_response_t;
 
-// The user plugin should call this function once during the initialization
-// parameter "separate_thread" set whether the framework is running in a
-// working thread rather than the default receiver thread
-// return: the framework context pointer
-void * init_restful_framework(char * module_name,MODULE_HANDLE, BROKER_HANDLE broker, bool separate_thread);
+typedef struct _bus_event
+{
+    int payload_fmt;
+    int payload_len;
+    char * payload;
+    char * url;
+    char * query;
+    char * src_module;
+}bus_event_t;
 
+
+/**        The callbacks that plugin should implement   **/
+
+void on_init_idrm_plugin(void * framework);
+char * on_get_module_name() ;
+const MODULE_API_1 * on_get_user_module_apis();
+const MODULE_API* IDRM_Module_GetApi(MODULE_API_VERSION gateway_api_version);
+
+
+/**       The API that a typical plugin calls           **/
 
 // register the url that this plugin will serve and handling function
 /* url match patterns:
@@ -97,31 +114,39 @@ void * init_restful_framework(char * module_name,MODULE_HANDLE, BROKER_HANDLE br
  *
  */
 typedef bool (*Plugin_Res_Handler) (restful_request_t *request, restful_response_t * response);
-bool register_resource_handler(const char * url, Plugin_Res_Handler handler, rest_action_t action);
+bool idrm_register_resource_handler(void * framework_ctx, const char * url, Plugin_Res_Handler handler, rest_action_t action);
 
 
-// The user application should call this function in the Azure Gateway SDK message recieve API
+typedef void (*Service_Result_Handler) (restful_response_t *response, void * user_data);
+int idrm_request_bus_service(restful_request_t * request, Service_Result_Handler response_handler, void * user_data, int timeout);
+int idrm_post_bus_event(bus_event_t * request);
+
+
+
+/**      The API that a plugin with user defined module entry should calls  **/
+
+// The user plugin should call this function once during the initialization
+// parameter "separate_thread" set whether the framework is running in a
+// working thread rather than the default receiver thread
+// return: the framework context pointer
+void * idrm_init_restful_framework(char * module_name,MODULE_HANDLE, BROKER_HANDLE broker, bool separate_thread);
+void idrm_cleanup_restful_framework(void * framework);
+
+
+// The user application should call this function in the bus message receive API
 // to allow the framework processing the incoming messages
 // return true is framework has handled this message
-bool handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle);
-
+bool idrm_handle_bus_message(MODULE_HANDLE moduleHandle, MESSAGE_HANDLE messageHandle);
 
 
 // if the user set "separate_thread" parameter in calling init_restful_framework(),
 // the application should call process_in_working_thread() timely to handle all the
 // framework event.
-// there are two situations that app should call this API:
-// 1. the working thread received any type of event from user defined wakeup_working_thread()
-// 2. after milliseconds as returned by last calling this API
-uint32_t process_in_working_thread(void * framework_ctx);
+uint32_t idrm_process_in_working_thread(void * framework_ctx);
+
+void idrm_wakeup_working_thread(void * framework);
 
 
-typedef void (*f_wakeup_working_thread) (void * framework_ctx);
-void set_working_thread_waker(void * framework_ctx, f_wakeup_working_thread);
-
-
-typedef void (*Service_Result_Handler) (restful_response_t *response, void * user_data);
-int request_bus_service(restful_request_t * request, Service_Result_Handler response_handler, void * user_data, int timeout);
 
 
 char * rest_action_str(int action);

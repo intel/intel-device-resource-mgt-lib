@@ -17,7 +17,10 @@
 
 /*
  * sdk_internals.h
+ *
+ * DON'T INCLUDE THIS HEADER IN YOUR APPLICATION SOURCE FILES
  */
+
 
 #ifndef APPS_GW_BROKER_PLUGIN_SDK_INCLUDE_SDK_INTERNALS_H_
 #define APPS_GW_BROKER_PLUGIN_SDK_INCLUDE_SDK_INTERNALS_H_
@@ -25,11 +28,14 @@
 #include <stdlib.h>
 #include "plugin_dlist.h"
 #include "agent_core_lib.h"
+#include "azure_c_shared_utility/condition.h"
+#include "plugin_sdk.h"
 
-/// DON'T INCLUDE THIS HEADER IN YOUR APPLICATION SOURCE FILES
+
 
 #define T_MESSAGE_REQUEST (T_User_Message +1)
-#define MAX_RESTFUL_ACTION 5
+#define T_MESSAGE_EVENT   (T_User_Message +2)
+
 
 typedef struct _resource_handler_node
 {
@@ -38,8 +44,6 @@ typedef struct _resource_handler_node
 	unsigned char match_pattern;
 	Plugin_Res_Handler res_handlers[MAX_RESTFUL_ACTION];
 }resource_handler_node_t;
-
-
 
 
 typedef struct _framework_ctx
@@ -55,16 +59,32 @@ typedef struct _framework_ctx
 
 	char * module_name;
 
-	void * working_thread_waker;
+	COND_HANDLE g_working_thread_cond;
+	LOCK_HANDLE g_working_thread_lock;
 
 }framework_ctx_t;
-extern framework_ctx_t * g_framework_ctx;
 
-void wakeup_working_thread(void * framework);
+framework_ctx_t * get_framework_ctx();
+
+
+
+typedef struct IDRM_MOD_HANDLE_DATA_TAG
+{
+    THREAD_HANDLE threadHandle;
+    LOCK_HANDLE lockHandle;
+    int stopThread;
+    BROKER_HANDLE broker;
+    framework_ctx_t * framework;
+}IDRM_MOD_HANDLE_DATA;
+
 
 bool decode_request(MESSAGE_HANDLE messageHandle, restful_request_t * request);
 bool decode_response(MESSAGE_HANDLE messageHandle, restful_response_t * response);
 MESSAGE_HANDLE encode_response(restful_response_t * response);
 MESSAGE_HANDLE encode_request(restful_request_t * request);
+
+bool decode_event(MESSAGE_HANDLE messageHandle, bus_event_t * event);
+MESSAGE_HANDLE encode_event(bus_event_t * event);
+
 
 #endif /* APPS_GW_BROKER_PLUGIN_SDK_INCLUDE_SDK_INTERNALS_H_ */

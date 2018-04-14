@@ -18,6 +18,24 @@
 #include "agent_core_lib.h"
 
 
+dlist_entry_ctx_t * create_dlist()
+{
+	dlist_entry_ctx_t * internal_queue = (dlist_entry_ctx_t *) malloc(sizeof(dlist_entry_ctx_t));
+	memset(internal_queue, 0, sizeof(*internal_queue));
+	DList_InitializeListHead(&(internal_queue->list_queue));
+	internal_queue->thread_mutex = Lock_Init();
+	internal_queue->thread_cond = Condition_Init();
+}
+
+void free_dlist(dlist_entry_ctx_t * dlist)
+{
+	Condition_Deinit(dlist->thread_cond);
+
+	Lock_Deinit(dlist->thread_mutex);
+
+	free(dlist);
+}
+
 void dlist_post(dlist_entry_ctx_t * link, E_Msg_Type type,  void * messageHandle , void * handler)
 {
 	dlist_node_t * node = (dlist_node_t*) malloc(sizeof(dlist_node_t));
@@ -30,6 +48,10 @@ void dlist_post(dlist_entry_ctx_t * link, E_Msg_Type type,  void * messageHandle
 	node->message_handler= handler;
 	Lock(link->thread_mutex);
 	DList_InsertTailList(&(link->list_queue), (PDLIST_ENTRY) node);
+
+	if(link->thread_cond)
+		Condition_Post(link->thread_cond);
+
 	Unlock(link->thread_mutex);
 }
 
