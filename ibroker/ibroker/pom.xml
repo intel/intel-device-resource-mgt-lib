@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>ibroker</name>
+  <description>openiot ibroker</description>
+
+  <parent>
+    <groupId>com.openiot.cloud</groupId>
+    <artifactId>openiot-cloud-parent</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>ibroker</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.openiot.cloud</groupId>
+      <artifactId>base</artifactId>
+    </dependency>
+
+    <!-- openiot sdk -->
+    <dependency>
+      <groupId>com.openiot.cloud</groupId>
+      <artifactId>sdk</artifactId>
+    </dependency>
+
+    <!-- iotivity -->
+    <dependency>
+      <groupId>org.iotivity.cloud</groupId>
+      <artifactId>CloudStack</artifactId>
+    </dependency>
+
+    <!-- californium -->
+    <dependency>
+      <groupId>org.eclipse.californium</groupId>
+      <artifactId>californium-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.influxdb</groupId>
+      <artifactId>influxdb-java</artifactId>
+      <version>2.15</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>build-info</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

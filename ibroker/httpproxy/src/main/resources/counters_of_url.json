@@ -1,0 +1,66 @@
+[
+  {
+    "url": "/fc/rd/device",
+    "config": "url"
+  },
+  {
+    "url": "/fc/rd/resource",
+    "config": "url"
+  },
+  {
+    "url": "/fc/rd/respro",
+    "config": "url"
+  },
+  {
+    "url": "/fc/rd/group",
+    "config": "url"
+  },
+  {
+    "url": "/fc/rd/folder",
+    "config": "url"
+  },
+  {
+    "url": "/fc/meta/restype",
+    "config": "url"
+  },
+  {
+    "url": "/fc/meta/grptype",
+    "config": "url"
+  },
+  {
+    "url": "/fc/dp/raw",
+    "config": "url"
+  },
+  {
+    "url": "/fc/dp/prodata",
+    "config": "url"
+  },
+  {
+    "url": "/fc/dp/dss",
+    "config": "url"
+  },
+  {
+    "url": "/fc/stats",
+    "config": "url"
+  },
+  {
+    "url": "/fc/opt",
+    "config": "url"
+  },
+  {
+    "url": "/fc/api/alarm",
+    "config": "url"
+  },
+  {
+    "url": "/fc/api/project",
+    "config": "url"
+  },
+  {
+    "url": "/fc/prov",
+    "config": "url"
+  },
+  {
+    "url": "/fc/controllog",
+    "config": "url"
+  }
+]

@@ -1,0 +1,14 @@
+{
+    "name": "mqttbridge",
+    "version": "1.0.0",
+    "description": "an event dispatcher between the mqtt message queue and the amqp queue",
+    "main": "Main.js",
+    "scripts": {
+        "start": "node Main.js"
+    },
+    "dependencies": {
+        "log4js": "^6.1.2",
+        "mqtt": "^3.0.0",
+        "rhea": "^1.0.20"
+    }
+}

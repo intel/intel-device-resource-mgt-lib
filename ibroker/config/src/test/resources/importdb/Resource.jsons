@@ -1,0 +1,112 @@
+[
+  {
+    "_id": "r_0937",
+    "cs": {
+      "as": [
+        {
+          "an": "spacecomsuming",
+          "av": "9"
+        }
+      ],
+      "dl": 3600,
+      "uc": [
+        {
+          "cn": "moneyconsuming",
+          "cv": "60"
+        }
+      ]
+    },
+    "di": "abs",
+    "grps": [],
+    "n": "/bigmat",
+    "u": "/bigmat"
+  },
+  {
+    "_id": "r_0938",
+    "cs": {
+      "as": [
+        {
+          "an": "spacecomsuming",
+          "av": "4"
+        }
+      ],
+      "dl": 3600,
+      "uc": [
+        {
+          "cn": "moneyconsuming",
+          "cv": "100"
+        }
+      ]
+    },
+    "di": "cardio",
+    "grps": [],
+    "n": "/stepper",
+    "u": "/stepper"
+  },
+  {
+    "_id": "r_0939",
+    "cs": {
+      "as": [
+        {
+          "an": "spacecomsuming",
+          "av": "12"
+        }
+      ],
+      "dl": 3600,
+      "uc": [
+        {
+          "cn": "moneyconsuming",
+          "cv": "180"
+        }
+      ]
+    },
+    "di": "arms",
+    "grps": [],
+    "n": "/dumbbells",
+    "u": "/dumbbells"
+  },
+  {
+    "_id": "r_0940",
+    "cs": {
+      "as": [
+        {
+          "an": "spacecomsuming",
+          "av": "8"
+        }
+      ],
+      "dl": 3600,
+      "uc": [
+        {
+          "cn": "moneyconsuming",
+          "cv": "300"
+        }
+      ]
+    },
+    "di": "legs",
+    "grps": [],
+    "n": "/legextension",
+    "u": "/legextension"
+  },
+  {
+    "_id": "r_0941",
+    "cs": {
+      "as": [
+        {
+          "an": "spacecomsuming",
+          "av": "8"
+        }
+      ],
+      "dl": 3600,
+      "uc": [
+        {
+          "cn": "moneyconsuming",
+          "cv": "460"
+        }
+      ]
+    },
+    "di": "abs",
+    "grps": [],
+    "n": "/abbench",
+    "u": "/abbench"
+  }
+]

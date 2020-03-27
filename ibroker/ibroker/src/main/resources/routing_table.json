@@ -1,0 +1,15 @@
+[
+  {
+    "inetaddr": "127.0.0.1:5685",
+    "uripath": "/dp"
+  },
+  {
+    "inetaddr": "127.0.0.1:5684",
+    "uripath": "/meta"
+  },
+  {
+    "inetaddr": "127.0.0.1:5684",
+    "uripath": "/rd"
+  }
+]
+

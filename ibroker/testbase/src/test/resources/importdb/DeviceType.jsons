@@ -1,0 +1,15 @@
+{
+  "_id": "_id_deviceType_1",
+  "n": "n_deviceType_1",
+  "rts": [
+    "_id_resourceType_1"
+  ]
+}
+{
+  "_id": "_id_deviceType_2",
+  "n": "n_deviceType_1",
+  "rts": [
+    "_id_resourceType_1",
+    "_id_resourceType_2"
+  ]
+}

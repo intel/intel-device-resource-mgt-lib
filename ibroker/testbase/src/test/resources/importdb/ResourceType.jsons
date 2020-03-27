@@ -1,0 +1,41 @@
+{
+  "_id": "_id_resourceType_1",
+  "n": "n_resourceType_1",
+  "d": "This is resource type 1",
+  "ps": [
+    {
+      "s": "rt1-p1",
+      "n": "n_rt1-property_1",
+      "m": true,
+      "a": "r",
+      "t": "int",
+      "u": "",
+      "d": "this is n_rt1-property_1"
+    }
+  ]
+}
+{
+  "_id": "_id_resourceType_2",
+  "n": "n_resourceType_2",
+  "d": "This is resource type 2",
+  "ps": [
+    {
+      "s": "rt2-p1",
+      "n": "n_rt2-property_1",
+      "m": true,
+      "a": "r",
+      "t": "int",
+      "u": "",
+      "d": "this is n_rt2-property_1"
+    },
+    {
+      "s": "rt2-p2",
+      "n": "n_rt2-property_2",
+      "m": false,
+      "a": "rw",
+      "t": "string",
+      "u": "",
+      "d": "this is n_rt2-property_2"
+    }
+  ]
+}

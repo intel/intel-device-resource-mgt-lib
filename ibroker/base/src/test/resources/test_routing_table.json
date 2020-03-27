@@ -1,0 +1,18 @@
+[
+  {
+    "inetaddr": "127.0.0.1:5685",
+    "uripath": "/dp"
+  },
+  {
+    "inetaddr": "localhost:5684",
+    "uripath": "/meta"
+  },
+  {
+    "inetaddr": "openiot-server-service-1.bj.intel.com:5684",
+    "uripath": "/rd"
+  },
+  {
+    "inetaddr": "openiot-server-service-1:5684",
+    "uripath": "/unreachable"
+  }
+]

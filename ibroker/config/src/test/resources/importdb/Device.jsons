@@ -1,0 +1,102 @@
+[
+  {
+    "_id": "cardio",
+    "cs": {
+      "as": [
+        {
+          "an": "ability",
+          "av": "heart"
+        },
+        {
+          "an": "oxygen-rich",
+          "av": "true"
+        }
+      ],
+      "dl": 3600,
+      "rn": 10,
+      "uc": [
+        {
+          "cn": "heart-rate",
+          "cv": "180"
+        }
+      ]
+    },
+    "grps": [],
+    "n": "cardio"
+  },
+  {
+    "_id": "abs",
+    "cs": {
+      "as": [
+        {
+          "an": "ability",
+          "av": "abdominal"
+        },
+        {
+          "an": "oxygen-rich",
+          "av": "true/false"
+        }
+      ],
+      "dl": 3600,
+      "rn": 10,
+      "uc": [
+        {
+          "cn": "",
+          "cv": ""
+        }
+      ]
+    },
+    "grps": [],
+    "n": "abs"
+  },
+  {
+    "_id": "arms",
+    "cs": {
+      "as": [
+        {
+          "an": "ability",
+          "av": "arms"
+        },
+        {
+          "an": "oxygen-rich",
+          "av": "true/false"
+        }
+      ],
+      "dl": 3600,
+      "rn": 10,
+      "uc": [
+        {
+          "cn": "",
+          "cv": ""
+        }
+      ]
+    },
+    "grps": [],
+    "n": "arms"
+  },
+  {
+    "_id": "legs",
+    "cs": {
+      "as": [
+        {
+          "an": "ability",
+          "av": "legs"
+        },
+        {
+          "an": "oxygen-rich",
+          "av": "true/false"
+        }
+      ],
+      "dl": 3600,
+      "rn": 10,
+      "uc": [
+        {
+          "cn": "",
+          "cv": ""
+        }
+      ]
+    },
+    "grps": [],
+    "n": "legs"
+  }
+]

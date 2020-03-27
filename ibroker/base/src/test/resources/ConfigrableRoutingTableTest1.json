@@ -1,0 +1,10 @@
+[
+  {
+    "uripath": "/brewed",
+    "inetaddr": "10.0.0.1:12"
+  },
+  {
+    "uripath": "/frenchpress",
+    "inetaddr": "10.0.0.1:13"
+  }
+]

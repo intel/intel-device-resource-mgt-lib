@@ -1,0 +1,14 @@
+[
+  {
+    "url": "/rd/device",
+    "config": "long"
+  },
+  {
+    "url": "/rd/resource",
+    "config": "short"
+  },
+  {
+    "url": "/rd/group",
+    "config": "long"
+  }
+]

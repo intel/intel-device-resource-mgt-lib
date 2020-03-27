@@ -1,0 +1,63 @@
+[
+  {
+    "url": "/meta/grptype",
+    "permissions": [
+      {
+        "method": "get",
+        "role": "user"
+      },
+      {
+        "method": "POST",
+        "role": "admin"
+      },
+      {
+        "method": "PUT",
+        "role": "admin"
+      }
+    ]
+  },
+  {
+    "url": "/meta/grptype/attr",
+    "permissions": [
+      {
+        "method": "get",
+        "role": "user"
+      }
+    ]
+  },
+  {
+    "url": "/meta/grptype/cfg",
+    "permissions": [
+      {
+        "method": "*",
+        "role": "*"
+      }
+    ]
+  },
+  {
+    "url": "/meta/grptype/dst",
+    "permissions": [
+      {
+        "method": "POST",
+        "role": "admin"
+      },
+      {
+        "method": "*",
+        "role": "*"
+      }
+    ]
+  },
+  {
+    "url": "/meta/restype",
+    "permissions": [
+      {
+        "method": "geT",
+        "role": "admin"
+      },
+      {
+        "method": "PUT",
+        "role": "admin"
+      }
+    ]
+  }
+]
