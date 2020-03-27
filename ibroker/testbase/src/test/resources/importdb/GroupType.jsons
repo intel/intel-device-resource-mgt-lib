@@ -1,0 +1,32 @@
+{
+  "_id": "_id_groupType_1",
+  "n": "n_groupType_1",
+  "as": [
+    {
+      "n": "n_gt1-attr1",
+      "t": "int",
+      "d": 20
+    },
+    {
+      "n": "n_gt1-attr2",
+      "t": "string",
+      "d": "n_gt1-attr2 default value"
+    }
+  ]
+}
+{
+  "_id": "_id_groupType_2",
+  "n": "n_groupType_2",
+  "as": [
+    {
+      "n": "n_gt2-attr1",
+      "t": "int",
+      "d": 30
+    },
+    {
+      "n": "n_gt2-attr2",
+      "t": "string",
+      "d": "n_gt2-attr2 default value"
+    }
+  ]
+}

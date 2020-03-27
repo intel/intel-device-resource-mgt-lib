@@ -1,0 +1,130 @@
+[
+  {
+    "_id": "00000000-0000-0000-0000-000000000001",
+    "c": true,
+    "cs": {
+      "uc": [
+        {
+          "cn": "floor",
+          "cv": "1st"
+        },
+        {
+          "cn": "shared",
+          "cv": "true"
+        }
+      ]
+    },
+    "e": true,
+    "n": "00000000-0000-0000-0000-000000000001",
+    "st": "lwm2m"
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000002",
+    "c": true,
+    "e": true,
+    "n": "00000000-0000-0000-0000-000000000002",
+    "st": "ocf",
+    "grps": [
+      "peach"
+    ]
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000003",
+    "c": true,
+    "e": true,
+    "n": "September",
+    "st": "modbus"
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000004",
+    "c": true,
+    "e": true,
+    "n": "sePtember",
+    "st": "modbus",
+    "cs": {
+      "as": [
+        {
+          "an": "iced_tea",
+          "av": "shaken_sweet_tea"
+        },
+        {
+          "an": "iced_tea",
+          "av": "summer_sunrise"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000005",
+    "c": true,
+    "e": true,
+    "n": "septemBEr",
+    "st": "modbus",
+    "cs": {
+      "as": [
+        {
+          "an": "iced_tea",
+          "av": "shaken_iced_black_tea"
+        },
+        {
+          "an": "iced_tea",
+          "av": "shaken_iced_green_tea"
+        },
+        {
+          "an": "iced_tea",
+          "av": "summer_sunrise"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000006",
+    "c": true,
+    "dt": "intel.iagent",
+    "e": true,
+    "f": "root",
+    "n": "amazing",
+    "st": "iagent"
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000007",
+    "c": true,
+    "dt": "intel.iagent",
+    "e": true,
+    "f": "root",
+    "n": "amaZing",
+    "st": "iagent",
+    "dt": "host"
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000008",
+    "c": false,
+    "dt": "intel.iagent",
+    "e": true,
+    "f": "root",
+    "n": "amazINg",
+    "st": "modbus",
+    "dt": "host"
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000009",
+    "c": false,
+    "dt": "intel.iagent",
+    "e": true,
+    "f": "usr-1",
+    "n": "AMAZING",
+    "st": "modbus"
+  },
+  {
+    "_id": "00000000-0000-0000-0000-000000000010",
+    "c": false,
+    "dt": "intel.iagent",
+    "e": true,
+    "f": "usr-1",
+    "n": "assertJ",
+    "st": "modbus",
+    "grps": [
+      "junit"
+    ]
+  }
+]

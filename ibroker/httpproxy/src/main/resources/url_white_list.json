@@ -1,0 +1,30 @@
+[
+  {
+    "url": "/login",
+    "method": "*"
+  },
+  {
+    "url": "/auth",
+    "method": "*"
+  },
+  {
+    "url": "/api/user",
+    "method": "*"
+  },
+  {
+    "url": "/api/user/login",
+    "method": "*"
+  },
+  {
+    "url": "/api/model/gw",
+    "method": "*"
+  },
+  {
+    "url": "/api/model/devset",
+    "method": "*"
+  },
+  {
+    "url": "/api/model/mb_meta",
+    "method": "*"
+  }
+]

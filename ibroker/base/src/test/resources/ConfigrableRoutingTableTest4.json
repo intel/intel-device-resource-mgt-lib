@@ -1,0 +1,10 @@
+[
+  {
+    "uripath": "/turkish/coffee",
+    "inetaddr": "10.0.0.1:ab"
+  },
+  {
+    "uripath": "/moka",
+    "inetaddr": "10.0.0.2:14"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "n": "Cloud_Configuration_Management",
+    "t": "CFG_SYNC",
+    "ts": [
+      {
+        "tt": "DEVICE",
+        "ti": "*"
+      },
+      {
+        "tt": "RESOURCE",
+        "ti": "*"
+      },
+      {
+        "tt": "GROUP",
+        "ti": "*"
+      },
+      {
+        "tt": "GROUP_TYPE",
+        "ti": "*"
+      }
+    ]
+  }
+]

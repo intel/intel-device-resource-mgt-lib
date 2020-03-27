@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "rp_0934",
+    "di": "cardio",
+    "n": "easy",
+    "res": "/stepper",
+    "uc": [
+      {
+        "cn": "earn",
+        "cv": "1"
+      },
+      {
+        "cn": "cost",
+        "cv": "45s"
+      }
+    ]
+  },
+  {
+    "_id": "rp_0935",
+    "di": "cardio",
+    "n": "medium",
+    "res": "/stepper",
+    "uc": [
+      {
+        "cn": "earn",
+        "cv": "2"
+      },
+      {
+        "cn": "cost",
+        "cv": "150s"
+      }
+    ]
+  },
+  {
+    "_id": "rp_0936",
+    "di": "cardio",
+    "n": "hard",
+    "res": "/stepper",
+    "uc": [
+      {
+        "cn": "earn",
+        "cv": "3"
+      },
+      {
+        "cn": "cost",
+        "cv": "600s"
+      }
+    ]
+  },
+  {
+    "_id": "rp_0937",
+    "di": "",
+    "n": "",
+    "res": "",
+    "uc": [
+      {
+        "cn": "",
+        "cv": ""
+      }
+    ]
+  },
+  {
+    "_id": "rp_0938",
+    "di": "",
+    "n": "",
+    "res": "",
+    "uc": [
+      {
+        "cn": "",
+        "cv": ""
+      }
+    ]
+  }
+]

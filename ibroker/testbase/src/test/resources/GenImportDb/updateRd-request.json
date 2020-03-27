@@ -1,0 +1,35 @@
+[
+  {
+    "di": "00000000-0000-0000-0000-000000000001",
+    "st": "lwm2m",
+    "dt": "n_deviceType_1",
+    "links": [
+      {
+        "href": "/d1/xxx/x1",
+        "rt": [
+          "n_resourceType_1"
+        ]
+      }
+    ]
+  },
+  {
+    "di": "00000000-0000-0000-0000-000000000002",
+    "st": "ocf",
+    "dt": "n_deviceType_2",
+    "links": [
+      {
+        "href": "/d2/xxx/x1",
+        "rt": [
+          "n_resourceType_1"
+        ]
+      },
+      {
+        "href": "/d2/xxx/x2",
+        "rt": [
+          "n_resourceType_1",
+          "n_resourceType_2"
+        ]
+      }
+    ]
+  }
+]

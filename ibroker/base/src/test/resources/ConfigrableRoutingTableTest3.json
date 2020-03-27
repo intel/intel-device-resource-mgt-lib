@@ -1,0 +1,10 @@
+[
+  {
+    "uripath": "/coldbrew",
+    "inetaddr": "10.0.0.1:ab"
+  },
+  {
+    "uripath": "/percolated",
+    "inetaddr": "invalid_ip_addr"
+  }
+]
