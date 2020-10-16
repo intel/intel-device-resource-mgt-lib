@@ -107,6 +107,10 @@ public class DurationCounterManageTest {
 
   @Test
   public void testStatic() throws Exception {
+    // these 2 beasns are created early, maybe periodRemainingMillis is decounted less than 10ms here
+    getRdDeviceCounter.reset();
+    postRdCounter.reset();
+
     assertThat(counterManage).isNotNull();
     assertThat(counterManage.getCounter("GET_RD_DEVICE")).isEqualTo(getRdDeviceCounter);
 
