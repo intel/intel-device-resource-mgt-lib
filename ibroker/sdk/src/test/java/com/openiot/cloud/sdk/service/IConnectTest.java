@@ -55,8 +55,8 @@ public class IConnectTest {
       System.out.println("receive a response " + response);
       assertThat(response.getStatus()).isEqualTo(HttpStatus.OK);
 
-      completableFuture.complete(true);
       result.set(true);
+      completableFuture.complete(true);
     }, 5, TimeUnit.SECONDS);
 
     completableFuture.get(6, TimeUnit.SECONDS);
@@ -83,8 +83,8 @@ public class IConnectTest {
     request1.send(response -> {
       System.out.println("receive a response " + response);
       assertThat(response.getStatus()).isEqualTo(HttpStatus.REQUEST_TIMEOUT);
-      completableFuture.complete(true);
       result.set(true);
+      completableFuture.complete(true);
     }, 500, TimeUnit.MILLISECONDS);
 
     completableFuture.get(20, TimeUnit.SECONDS);
